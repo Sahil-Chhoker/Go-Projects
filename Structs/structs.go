@@ -10,6 +10,13 @@ func main() {
 	myCar.FrontWheel.Radius = 5
 
 	fmt.Println(myCar.FrontWheel.Radius)
+
+	r := rect{
+		width:  5,
+		height: 10,
+	}
+
+	fmt.Println(r.area())
 }
 
 type car struct {
@@ -52,4 +59,15 @@ type _car struct {
 type truck struct {
 	car
 	bedsize int
+}
+
+//Struct Methods
+
+type rect struct {
+	width  int
+	height int
+}
+
+func (r rect) area() int {
+	return r.width * r.height
 }
