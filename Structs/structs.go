@@ -41,3 +41,15 @@ type another_car struct {
 		Material string
 	}
 }
+
+//Embeded structs
+
+type _car struct {
+	make  string
+	model string
+}
+
+type truck struct {
+	car
+	bedsize int
+}
