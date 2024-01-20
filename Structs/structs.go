@@ -25,3 +25,19 @@ type Wheel struct {
 	Radius   int
 	Material string
 }
+
+//OR
+
+//Anonymous Structs
+
+type another_car struct {
+	Make   string
+	Model  string
+	Height int
+	Width  int
+
+	Whell struct {
+		Radius   int
+		Material string
+	}
+}
