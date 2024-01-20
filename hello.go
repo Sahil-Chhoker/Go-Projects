@@ -14,5 +14,7 @@ func main() {
 
 	averageOpenRate, displayTime := 89.00, "23 seconds"
 
+	fmt.Printf("Type %T\n", averageOpenRate)
+
 	fmt.Println(a, float_, str, trueorfalse, congrats, averageOpenRate, displayTime)
 }
