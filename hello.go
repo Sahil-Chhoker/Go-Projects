@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	fmt.Println("Hello, World!")
+	var a int = 32
+	var float_ float64 = 30.23
+	var str string = "Hi"
+	var trueorfalse bool = true
+
+	fmt.Println(a, float_, str, trueorfalse)
 }
