@@ -10,5 +10,7 @@ func main() {
 	var str string = "Hi"
 	var trueorfalse bool = true
 
-	fmt.Println(a, float_, str, trueorfalse)
+	congrats := "Congratulations"
+
+	fmt.Println(a, float_, str, trueorfalse, congrats)
 }
