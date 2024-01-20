@@ -13,5 +13,13 @@ func main() {
 	fmt.Printf("This is %dnd file\n", 2)
 
 	//Float(Used frequently)
-	fmt.Printf("I am %.0f years old", 17.98)
+	fmt.Printf("I am %.0f years old\n", 17.98)
+
+	const name = "Saul Goodman"
+	const openRate = 30.5
+
+	//.Sprintf is used to assign the value to some other variable
+	msg := fmt.Sprintf("%v has a %.1f open rate", name, openRate)
+
+	fmt.Println(msg)
 }
