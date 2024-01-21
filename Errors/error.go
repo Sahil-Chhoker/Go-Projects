@@ -6,12 +6,9 @@ import (
 )
 
 func main() {
-	normalErrorHandling()
-}
-
-// The Error Interface
-type error interface {
-	Error() string
+	// normalErrorHandling()
+	msg, _ := sendSMS("Hello Dummy", "Sahil")
+	fmt.Printf("Message : %v\n", msg)
 }
 
 func normalErrorHandling() {
@@ -23,4 +20,30 @@ func normalErrorHandling() {
 	}
 
 	fmt.Println("The result is = ", i)
+}
+
+// Creating our own Errors
+// The Error Interface
+type error interface {
+	Error() string
+}
+
+type userError struct {
+	name string
+}
+
+func (e userError) Error() string {
+	return fmt.Sprintf("%v has a problem with their account", e)
+}
+
+func sendSMS(msg, userName string) (string, error) {
+	if !canSendToUser(userName) {
+		return "", userError{name: userName}
+	}
+
+	return msg, nil
+}
+
+func canSendToUser(userName string) bool {
+	return true
 }
