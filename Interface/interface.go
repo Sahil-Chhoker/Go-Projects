@@ -19,6 +19,9 @@ func main() {
 	checkType(shape(r))
 	checkType(shape(c))
 
+	_checkType(shape(r))
+	_checkType(shape(c))
+
 	fmt.Printf("Area of Rectangle : %f\nPerimeter of Rectangle : %f\n", r.area(), r.perimeter())
 	fmt.Printf("Area of Circle : %f\nPerimeter of circle : %f\n", c.area(), c.perimeter())
 }
@@ -65,4 +68,16 @@ func checkType(s shape) {
 	if ok {
 		fmt.Println("It is a Rectangle with area = ", rec.area())
 	}
+}
+
+//Alternate to checkType Method
+
+func _checkType(s shape) {
+	switch v := s.(type) {
+	case circle:
+		fmt.Printf("It is a %T\n", v)
+	case rect:
+		fmt.Printf("It is a %T\n", v)
+	}
+
 }
