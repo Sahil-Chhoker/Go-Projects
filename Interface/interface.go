@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+
 	r := rect{
 		width:  5,
 		height: 10,
@@ -14,6 +15,9 @@ func main() {
 	c := circle{
 		radius: 5,
 	}
+
+	checkType(shape(r))
+	checkType(shape(c))
 
 	fmt.Printf("Area of Rectangle : %f\nPerimeter of Rectangle : %f\n", r.area(), r.perimeter())
 	fmt.Printf("Area of Circle : %f\nPerimeter of circle : %f\n", c.area(), c.perimeter())
@@ -46,4 +50,19 @@ func (c circle) area() float64 {
 
 func (c circle) perimeter() float64 {
 	return 2 * math.Pi * c.radius
+}
+
+func checkType(s shape) {
+	cir, ok := s.(circle)
+
+	if ok {
+
+		fmt.Println("It is a Circle with area = ", cir.area())
+	}
+
+	rec, ok := s.(rect)
+
+	if ok {
+		fmt.Println("It is a Rectangle with area = ", rec.area())
+	}
 }
