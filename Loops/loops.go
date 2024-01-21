@@ -5,5 +5,7 @@ import (
 )
 
 func main() {
-	fmt.Println("Loops in GO")
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
 }
