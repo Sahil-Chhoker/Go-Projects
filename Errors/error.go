@@ -1,14 +1,18 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"strconv"
 )
 
 func main() {
+
 	// normalErrorHandling()
 	msg, _ := sendSMS("Hello Dummy", "Sahil")
+	_msg, err := _sendSMS("Hello Dummy", "Sahil")
 	fmt.Printf("Message : %v\n", msg)
+	fmt.Printf("Message : %v\nError : ", _msg, err)
 }
 
 func normalErrorHandling() {
@@ -44,6 +48,18 @@ func sendSMS(msg, userName string) (string, error) {
 	return msg, nil
 }
 
+//Alternate Method for custom errors(Using "errors" Package)
+
+func _sendSMS(msg, userName string) (string, error) {
+	var err error = errors.New("Error is here")
+
+	if !canSendToUser(userName) {
+		return "", err
+	}
+
+	return msg, nil
+}
+
 func canSendToUser(userName string) bool {
-	return true
+	return false
 }
