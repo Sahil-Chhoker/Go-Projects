@@ -5,5 +5,12 @@ import (
 )
 
 func main() {
-	fmt.Print("Arrays in GO")
+	//Arrays
+	integers := [3]int{0, 4, 6}
+
+	//Slices
+	b := integers[0:2]
+
+	fmt.Println(integers)
+	fmt.Println(b)
 }
