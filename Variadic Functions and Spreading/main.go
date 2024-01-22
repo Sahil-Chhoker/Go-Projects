@@ -10,7 +10,7 @@ func main() {
 }
 
 // Variadic Function:
-func sum(nums ...int) int { // Where ...int is a slice
+func sum(nums ...int) int {
 	var num int = 0
 	for i := 0; i < len(nums); i++ {
 		num += nums[i]
