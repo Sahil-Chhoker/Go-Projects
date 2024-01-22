@@ -24,6 +24,9 @@ func main() {
 		fmt.Print(j)
 		j++
 	}
+
+	//The fizzbuzz game
+	fizzbuzz()
 }
 
 //We can ommit for loops in GO
@@ -36,3 +39,17 @@ func main() {
 // for CONDITION{
 
 // }
+
+func fizzbuzz() {
+	for a := 1; a <= 100; a++ {
+		if (a%3) == 0 && (a%5) == 0 {
+			fmt.Println("fizzbuzz")
+		} else if a%3 == 0 {
+			fmt.Println("fizz")
+		} else if a%5 == 0 {
+			fmt.Println("buzz")
+		} else {
+			fmt.Println(a)
+		}
+	}
+}
