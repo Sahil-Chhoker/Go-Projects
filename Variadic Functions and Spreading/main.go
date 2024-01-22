@@ -11,6 +11,13 @@ func main() {
 	//Calling by Spread Operators:
 	names := []string{"bob", "sue", "damn"}
 	printStrings(names...)
+
+	//Append Functions for Slices
+
+	// slice.append(slice, oneThing) or
+	// slice.append(slice, firstThing, secondTheme) or
+	// slice.append(slice, anotherSlice...)
+
 }
 
 // Variadic Function:
