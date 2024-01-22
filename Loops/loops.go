@@ -17,6 +17,13 @@ func main() {
 	}
 
 	fmt.Println("Plant has grown to ", plantHeight, " inches")
+
+	//Infinte Loop
+	j := 1
+	for {
+		fmt.Print(j)
+		j++
+	}
 }
 
 //We can ommit for loops in GO
