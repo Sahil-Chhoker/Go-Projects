@@ -29,4 +29,20 @@ func main() {
 	a := len(ages)
 
 	fmt.Println(a)
+
+	//Insert an element
+	age["Andy"] = 100000
+	fmt.Println(age)
+
+	//Get an Element
+	b := age["John"]
+	fmt.Println(b)
+
+	//Delete an Element
+	delete(age, "Mary")
+	fmt.Println(age)
+
+	//Check if a key exixts
+	_, ok := age["Mary"]
+	fmt.Println(ok)
 }
