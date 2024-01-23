@@ -24,4 +24,9 @@ func main() {
 	}
 
 	fmt.Println(age)
+
+	//Finding length of a map
+	a := len(ages)
+
+	fmt.Println(a)
 }
