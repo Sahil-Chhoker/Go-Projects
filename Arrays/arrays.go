@@ -35,6 +35,16 @@ func main() {
 
 	//Note : DON'T DO THIS::
 	// oneSlice = append(otherSlice, element)
+
+	//Easy Way loop over Slices:
+	// for INDEX, ELEMENT := range SLICE {
+
+	// }
+
+	fruits := []string{"Apple", "Banana", "Grapes"}
+	for i, fruit := range fruits {
+		fmt.Println(i, fruit)
+	}
 }
 
 //SLice of Slices
