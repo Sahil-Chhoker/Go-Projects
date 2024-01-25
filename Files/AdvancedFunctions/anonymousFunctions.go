@@ -6,9 +6,9 @@ import (
 
 func main() {
 	nums := []int{1, 2, 3, 4, 5}
+
 	//Here we define an anonymous function that doubles an int
 	// and pass it to doMath
-
 	altNumsDoubled := doMath(func(x int) int {
 		return x + x
 	}, nums)
