@@ -4,6 +4,14 @@ import (
 	"fmt"
 )
 
+type car struct {
+	color string
+}
+
+func (c *car) setCotor(color string) {
+	c.color = color
+}
+
 func main() {
 	var p *int // Null Pointer
 
@@ -20,4 +28,13 @@ func main() {
 
 	//NOTE : NIL POINTERS
 	//Always check if the pointer is nil or not before dereferencing it
+
+	//POINTER RECEIVERS
+	c := car{
+		color: "white",
+	}
+
+	c.setCotor("Blue")
+	fmt.Println(c.color)
+	// prints "blue"
 }
