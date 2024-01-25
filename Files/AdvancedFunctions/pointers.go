@@ -8,7 +8,7 @@ type car struct {
 	color string
 }
 
-func (c *car) setCotor(color string) {
+func (c *car) setColor(color string) {
 	c.color = color
 }
 
@@ -34,7 +34,7 @@ func main() {
 		color: "white",
 	}
 
-	c.setCotor("Blue")
+	c.setColor("Blue")
 	fmt.Println(c.color)
 	// prints "blue"
 }
