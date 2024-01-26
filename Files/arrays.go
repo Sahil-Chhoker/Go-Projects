@@ -47,7 +47,7 @@ func main() {
 	}
 }
 
-//SLice of Slices
+//Slice of Slices
 
 func createMatrix(rows, columns int) [][]int {
 	matrix := make([][]int, 0)
