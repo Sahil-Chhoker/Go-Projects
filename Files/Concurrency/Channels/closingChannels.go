@@ -18,4 +18,12 @@ func main() {
 
 	//NOTE :
 	//Don't send on a closed channel
+
+	//SELECT statement:
+	select {
+	case i, ok := <-ch:
+		fmt.Println(i, ok)
+	case s, ok := <-ch:
+		fmt.Println(s, ok)
+	}
 }
