@@ -30,3 +30,13 @@ func main() {
 		//so do somethong else
 	}
 }
+
+// READ-ONLY Channels:
+func readCh(ch <-chan int) {
+	//Channel can only be read from this function
+}
+
+// WRITE-ONLY Channels:
+func writeCh(ch chan<- int) {
+	//Channel can only be written from this function
+}
