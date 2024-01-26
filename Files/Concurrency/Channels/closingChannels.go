@@ -15,4 +15,7 @@ func main() {
 	fmt.Println(c, ok)
 
 	//ok is false if the channel is empty and closed
+
+	//NOTE :
+	//Don't send on a closed channel
 }
