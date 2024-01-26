@@ -15,5 +15,13 @@ func main() {
 	//Receiving value from a channel
 	v := <-ch
 
+	//NOTE :
+	//The sending and receiving values from channels are blocking functions
+
 	fmt.Print(v)
 }
+
+//BLOCKING AND DEADLOCKS
+//A deadlock is when a group of goroutines are all blocking so none of them
+//can continue. This is a common bug that you need to watch out for in
+//concurrent programming.
