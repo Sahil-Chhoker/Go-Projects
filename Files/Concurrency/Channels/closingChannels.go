@@ -25,5 +25,8 @@ func main() {
 		fmt.Println(i, ok)
 	case s, ok := <-ch:
 		fmt.Println(s, ok)
+	default:
+		//receiving from ch would block
+		//so do somethong else
 	}
 }
