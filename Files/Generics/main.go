@@ -19,8 +19,11 @@ func splitStringStice(s []string) ([]string, []string) {
 	return s[:mid], s[mid:]
 }
 
-//With Generics:
+//and so on...
 
+//-----------------------------------------------------------//
+
+// With Generics:
 func splitAnySlice[T any](s []T) ([]T, []T) {
 	mid := len(s) / 2
 	return s[:mid], s[mid:]
